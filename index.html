@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bernard A. Traqueña — Head of Engineering</title>
+  <meta name="description" content="Bernard A. Traqueña — Head of Engineering, AI Platforms & Engineering Leadership. 20+ years building teams and shipping secure, scalable platforms. Singapore.">
+  <meta property="og:title" content="Bernard A. Traqueña — Head of Engineering">
+  <meta property="og:description" content="AI Platforms & Engineering Leadership · Singapore">
+  <meta property="og:type" content="profile">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --paper: #ffffff;
+      --ink: #1b1d21;
+      --muted: #5c6370;
+      --rule: #e3e4e0;
+      --accent: #0f766e;
+      --accent-soft: #e6f2f0;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111315;
+        --paper: #181a1d;
+        --ink: #e7e8ea;
+        --muted: #9aa1ab;
+        --rule: #2a2d31;
+        --accent: #5eead4;
+        --accent-soft: #15302d;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 15.5px/1.6 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 56px 64px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+    }
+
+    /* Header */
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+    header .title {
+      margin: 6px 0 14px;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .actions { margin-top: 18px; }
+    .btn {
+      display: inline-block;
+      padding: 6px 14px;
+      font: 500 13px var(--sans);
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn:hover { filter: brightness(0.96); }
+
+    /* Sections */
+    section { margin-top: 40px; }
+    h2 {
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+    }
+    p { margin: 0 0 12px; }
+    strong { font-weight: 600; }
+
+    /* Competencies */
+    .skills { display: grid; gap: 14px; margin: 0; }
+    .skills > div {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 16px;
+    }
+    .skills dt { font-weight: 600; }
+    .skills dd { margin: 0; color: var(--muted); }
+
+    /* Initiatives */
+    .initiative { margin-bottom: 20px; }
+    .initiative h3 {
+      margin: 0 0 4px;
+      font-size: 15.5px;
+      font-weight: 600;
+    }
+    .initiative .note { font-weight: 400; font-style: italic; color: var(--muted); }
+    code, .code {
+      font-family: var(--mono);
+      font-size: 0.9em;
+      color: var(--accent);
+    }
+
+    /* Experience */
+    .job { margin-bottom: 28px; }
+    .job-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 4px 16px;
+    }
+    .job h3 { margin: 0; font-size: 17px; font-weight: 600; }
+    .job .loc { font-size: 14px; color: var(--muted); }
+    .role {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0 16px;
+      margin: 10px 0 4px;
+    }
+    .role .name { font-weight: 600; }
+    .role .dates { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+    ul { margin: 6px 0 0; padding-left: 20px; }
+    li { margin-bottom: 4px; }
+    li::marker { color: var(--accent); }
+
+    .prev li { margin-bottom: 8px; }
+    .prev .meta { color: var(--muted); }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* Mobile */
+    @media (max-width: 720px) {
+      body { font-size: 15px; }
+      .page {
+        margin: 0;
+        padding: 32px 16px;
+        border: 0;
+        border-radius: 0;
+      }
+      header h1 { font-size: 27px; }
+      .skills > div { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    /* Print */
+    @media print {
+      :root {
+        --bg: #fff; --paper: #fff; --ink: #000; --muted: #444;
+        --rule: #ccc; --accent: #0f766e; --accent-soft: #fff;
+      }
+      @page { margin: 14mm 14mm; }
+      body { font-size: 10.5pt; }
+      .page { margin: 0; padding: 0; border: 0; max-width: none; }
+      .actions, footer { display: none; }
+      section { margin-top: 22px; }
+      .initiative, .job-head, .role { break-inside: avoid; }
+      h2 { break-after: avoid; }
+      a { color: var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Bernard A. Traqueña</h1>
+      <p class="title">Head of Engineering — AI Platforms &amp; Engineering Leadership</p>
+      <ul class="contact">
+        <li>Singapore</li>
+        <li><a href="mailto:btraquena@gmail.com">btraquena@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/btraquena">linkedin.com/in/btraquena</a></li>
+        <li><a href="https://github.com/traqy">github.com/traqy</a></li>
+      </ul>
+      <div class="actions">
+        <button class="btn" onclick="window.print()">Save as PDF</button>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Engineering leader with 20+ years of experience setting technical vision, building high-performing teams, and shipping secure, scalable platforms. Over the past two years I have led Tech in Asia's pivot to <strong>AI and agentic systems</strong> — defining and driving an org-wide program that re-architects our data/AI services so they can be operated by both humans and autonomous agents. I pair frontier AI architecture (multi-agent orchestration, control-plane APIs, RAG, MCP tool surfaces, LLM cost/guardrail design) with a deep, hands-on foundation in cloud architecture (AWS), Kubernetes, and DevOps. I'm hands-on enough to design and ship the systems myself, and strategic enough to align them to business outcomes, budget, and risk.</p>
+    </section>
+
+    <section>
+      <h2>Core Competencies</h2>
+      <dl class="skills">
+        <div>
+          <dt>AI &amp; Agentic Systems</dt>
+          <dd>Multi-agent orchestration, agentic control-plane API design, RAG, MCP tool manifests, LLM integration (Anthropic Claude, OpenAI), prompt-driven engineering, autonomy guardrails &amp; token/cost governance, AI-assisted SDLC</dd>
+        </div>
+        <div>
+          <dt>Engineering Leadership</dt>
+          <dd>Technical vision &amp; roadmap, departmental leadership, org-wide programs/EPICs, budget &amp; resource management, people &amp; performance management, stakeholder alignment</dd>
+        </div>
+        <div>
+          <dt>Cloud &amp; Platform / DevOps</dt>
+          <dd>AWS (VPC, EC2, S3, RDS, Redshift, EMR, Lambda, EKS, ECS Fargate, CloudFormation, CDK/TypeScript), Kubernetes, Ansible, Puppet, Jenkins, GitHub Actions, Infrastructure as Code</dd>
+        </div>
+        <div>
+          <dt>Security &amp; Observability</dt>
+          <dd>SSO/OAuth (Google, GitHub), RBAC &amp; least-privilege, scoped API keys, secret management (SSM/Secrets Manager), gitleaks, OpenTelemetry, SLOs</dd>
+        </div>
+        <div>
+          <dt>Languages &amp; Frameworks</dt>
+          <dd>Python, FastAPI, Java, Go, C#, PHP (Laravel/WordPress), Perl, Bash; Next.js/TypeScript</dd>
+        </div>
+        <div>
+          <dt>Data &amp; Databases</dt>
+          <dd>MySQL (Percona), Postgres, MS-SQL, Redshift, Cassandra, ElasticSearch, Hadoop/Hive, Couchbase, MongoDB, Redis, RabbitMQ</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Selected AI &amp; Agentic Initiatives</h2>
+
+      <div class="initiative">
+        <h3>“Agentic-Ready Baseline” — org-wide AI platform program <span class="note">(Author &amp; Owner, as Head of Engineering)</span></h3>
+        <p>Defined and led a company-wide initiative to modernise six data/AI services into a standard, agentic-ready baseline — each operable by humans via dashboard and by AI agents via API. Authored the architecture: service-independent <strong>control-plane APIs</strong> for agent consumption, <strong>MCP-compatible tool manifests</strong> for agent tool discovery, Google + GitHub <strong>SSO</strong>, scoped/hashed <strong>API keys</strong>, per-service <strong>OpenTelemetry observability with SLOs</strong>, <strong>SSM secret management</strong> (zero <code>.env</code> secrets, gitleaks-verified), and a Python 3.12 / FastAPI / GitHub Actions baseline. Established a pluggable auth + observability “seam” pattern so services ship foundation work immediately and integrate shared infra with zero handler churn.</p>
+      </div>
+
+      <div class="initiative">
+        <h3><span class="code">despicable</span> — multi-agent Slack bot fleet</h3>
+        <p>Architected a fleet of role-based AI agents (e.g. a read-only <code>data-analyst</code> persona) that operate internal services through their control-plane APIs — the primary <em>agentic</em> consumer of the platform above. Handled live-credential security (AES-256-GCM at rest), per-role scoping, and agent-to-service smoke tests as the definition of done for “an agent can operate this service.”</p>
+      </div>
+
+      <div class="initiative">
+        <h3><span class="code">owl-analytics</span> — agent-operated analytics service</h3>
+        <p>Designed a standalone, security-hardened analytics service that productizes the agent's data-analyst capability: read-only warehouse access with a strict SQL safety guard (bound parameters only, allowlisted identifiers), deny-by-default RBAC, fail-closed auth, KMS-encrypted artifacts with short-lived signed URLs, append-only audit, PII-free telemetry, and an MCP manifest so agents discover analyses as callable tools.</p>
+      </div>
+
+      <div class="initiative">
+        <h3>Modernised the AI/data service estate</h3>
+        <p>Set the architecture patterns and led modernisation across the internal AI/data services — a competitive-landscape visualisation tool (also the platform's visual + API-key reference exemplar), a large-scale web-scraping pipeline (Scrapy/ScrapyD → S3), an AI article-generation service, a retrieval-augmented (<strong>RAG</strong>) editorial assistant, and an article-recommendation engine.</p>
+      </div>
+
+      <div class="initiative">
+        <h3><span class="code">daily-toast-system</span> — AI-assisted engineering methodology</h3>
+        <p>Codified a prompt-driven SDLC adopted across the team: PRD + Figma (MCP code-connect) → structured “AI Context Documents” (ARCHITECTURE + JTBD checklists) → LLM code generation → senior human review/integration → peer-reviewed PR. Delivered as a multi-repo product (PayloadCMS, n8n automation, Next.js).</p>
+      </div>
+
+      <div class="initiative">
+        <h3><span class="code">mimiq</span> — multi-agent engineering-org simulator <span class="note">(personal project · <a href="https://github.com/traqy/mimiq">github.com/traqy/mimiq</a>)</span></h3>
+        <p>Built a system where a fleet of specialist AI agents (PM, full-stack engineer, QA, designer) collaborate in real time and write actual, git-committed code to disk. Engineered the hard parts of agent autonomy: a Redis Streams event bus draining to MongoDB history; supervisor-orchestrated api/bridge/runner processes; an independent <strong>Overseer</strong> that monitors for behavioral violations; five layers of guardrails (per-agent stream cursors, human-checkpoint pauses, @mention routing, stage-skills enforcement, rate limiting); sandboxed Docker execution of agent-built apps; OAuth/RBAC; and live token/cost tracking. Built on Claude.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Tech in Asia Pte. Ltd.</h3>
+          <span class="loc">Singapore · July 2017 – Present</span>
+        </div>
+
+        <div class="role">
+          <span class="name">Head of Engineering</span>
+        </div>
+        <ul>
+          <li>Define and execute the technical vision, strategy, and roadmap for a multi-disciplinary engineering organisation, aligning technology to core business objectives.</li>
+          <li>Led the company's shift to AI/agentic systems — see <em>Selected AI &amp; Agentic Initiatives</em> above — from architecture and security model through delivery.</li>
+          <li>Lead and mentor managers and engineers across Software Development, Mobile, QA, Infrastructure, and Cybersecurity.</li>
+          <li>Direct planning, execution, and delivery of all engineering projects, optimising resources against quality, budget, and timelines.</li>
+          <li>Champion cybersecurity strategy, incident response, and policy to protect company assets and user data.</li>
+          <li>Own the departmental budget and key technology-investment decisions.</li>
+        </ul>
+
+        <div class="role">
+          <span class="name">Senior Software &amp; DevOps Engineer</span>
+        </div>
+        <ul>
+          <li>Migrated and architected the entire Tech in Asia AWS infrastructure from scratch using Jenkins, Ansible, AWS CDK, and CloudFormation.</li>
+          <li>Automated the full lifecycle of a web platform on Kubernetes (AWS EKS &amp; Fargate, Kubespray) with Jenkins/Ansible CI/CD.</li>
+          <li>Built a Docker Swarm cluster orchestrating a customized Airflow environment for complex data workflows.</li>
+          <li>Developed deployment strategies for containerised web apps (Nginx, WordPress, Laravel) on Kubernetes.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>The Unity Group of Companies Pte. Ltd.</h3>
+          <span class="loc">Singapore</span>
+        </div>
+        <div class="role">
+          <span class="name">IT Manager</span>
+          <span class="dates">October 2016 – June 2017</span>
+        </div>
+        <ul>
+          <li>Managed all IT cloud services, digital assets, and infrastructure for a fintech startup.</li>
+          <li>Architected the corporate website's AWS infrastructure (EC2/S3/CDN) and a Jenkins CI/CD pipeline for deployment and backups.</li>
+          <li>Led the migration of 50+ users from Zimbra to Google G-Suite, introducing 2-Step Verification and mobile device management.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>MigMe / Mig33, Inc.</h3>
+          <span class="loc">Singapore</span>
+        </div>
+        <div class="role">
+          <span class="name">Senior Software Engineer (DevOps)</span>
+          <span class="dates">September 2011 – October 2016</span>
+        </div>
+        <ul>
+          <li>Established a fully automated CI/CD pipeline (Jenkins, Rundeck) for Java, PHP, and mobile applications.</li>
+          <li>Served as the production-infrastructure SME — Puppet, HAProxy, ElasticSearch, RabbitMQ, Couchbase, and MySQL clusters.</li>
+          <li>Transformed build processes from Ant to Maven/SBT and managed the Nexus artifact repository.</li>
+          <li>Built and maintained large-scale data imports into a Hadoop/Hive data warehouse.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Previous Experience</h2>
+      <ul class="prev">
+        <li><strong>Senior IT Analyst Developer</strong>, National Library Board (Emerio Globesoft Pte. Ltd.) <span class="meta">· Singapore · 2010 – 2011</span></li>
+        <li><strong>Senior Analyst Programmer</strong>, Phillip Capital Securities (Zenith Info Tech Pte. Ltd.) <span class="meta">· Singapore · 2009 – 2010</span></li>
+        <li><strong>Technical Operations Senior Manager</strong>, XyberSolutions, Inc. / Information Gateway, Inc. <span class="meta">· Philippines · 2005 – 2009</span></li>
+        <li><strong>Team Lead, Mobile Application Developer</strong>, XyberSolutions, Inc. / Information Gateway, Inc. <span class="meta">· Philippines</span></li>
+        <li><strong>Team Lead &amp; Senior Applications Developer</strong>, PIXEM Creative Cyberware <span class="meta">· Philippines · 1999 – 2005</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>B.S. in Computer Science</strong> — Ateneo De Naga University, Naga City, Philippines</p>
+    </section>
+
+    <section>
+      <h2>Certifications &amp; Training</h2>
+      <ul>
+        <li>Big Data on AWS (2014)</li>
+        <li>7 Habits of Highly Effective People (2008)</li>
+        <li>Leadership Development — IM Essentials Workshop (2006)</li>
+      </ul>
+    </section>
+
+    <footer>Bernard A. Traqueña · Singapore</footer>
+  </main>
+</body>
+</html>
