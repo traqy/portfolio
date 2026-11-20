@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bernard A. Traqueña — Cloud Platform &amp; DevOps</title>
+  <meta name="description" content="Bernard A. Traqueña — Engineering Leader, Cloud Platform, DevOps & DevSecOps on AWS. Singapore.">
+  <meta property="og:title" content="Bernard A. Traqueña — Cloud Platform & DevOps">
+  <meta property="og:description" content="Cloud Platform, DevOps & DevSecOps (AWS) · Singapore">
+  <meta property="og:type" content="profile">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --paper: #ffffff;
+      --ink: #1b1d21;
+      --muted: #5c6370;
+      --rule: #e3e4e0;
+      --accent: #0f766e;
+      --accent-soft: #e6f2f0;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111315;
+        --paper: #181a1d;
+        --ink: #e7e8ea;
+        --muted: #9aa1ab;
+        --rule: #2a2d31;
+        --accent: #5eead4;
+        --accent-soft: #15302d;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 15.5px/1.6 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 56px 64px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+    }
+
+    /* Header */
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+    header .title {
+      margin: 6px 0 14px;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .actions { margin-top: 18px; }
+    .btn {
+      display: inline-block;
+      padding: 6px 14px;
+      font: 500 13px var(--sans);
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn:hover { filter: brightness(0.96); }
+
+    /* Sections */
+    section { margin-top: 40px; }
+    h2 {
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+    }
+    p { margin: 0 0 12px; }
+    strong { font-weight: 600; }
+
+    /* Competencies */
+    .skills { display: grid; gap: 14px; margin: 0; }
+    .skills > div {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 16px;
+    }
+    .skills dt { font-weight: 600; }
+    .skills dd { margin: 0; color: var(--muted); }
+
+    /* Initiatives */
+    .initiative { margin-bottom: 20px; }
+    .initiative h3 {
+      margin: 0 0 4px;
+      font-size: 15.5px;
+      font-weight: 600;
+    }
+    .initiative .note { font-weight: 400; font-style: italic; color: var(--muted); }
+    code, .code {
+      font-family: var(--mono);
+      font-size: 0.9em;
+      color: var(--accent);
+    }
+
+    /* Experience */
+    .job { margin-bottom: 28px; }
+    .job-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 4px 16px;
+    }
+    .job h3 { margin: 0; font-size: 17px; font-weight: 600; }
+    .job .loc { font-size: 14px; color: var(--muted); }
+    .job .sub { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+    .role {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0 16px;
+      margin: 10px 0 4px;
+    }
+    .role .name { font-weight: 600; }
+    .role .dates { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+    ul { margin: 6px 0 0; padding-left: 20px; }
+    li { margin-bottom: 4px; }
+    li::marker { color: var(--accent); }
+
+    .prev li { margin-bottom: 8px; }
+    .prev .meta { color: var(--muted); }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* Mobile */
+    @media (max-width: 720px) {
+      body { font-size: 15px; }
+      .page {
+        margin: 0;
+        padding: 32px 16px;
+        border: 0;
+        border-radius: 0;
+      }
+      header h1 { font-size: 27px; }
+      .skills > div { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    /* Print */
+    @media print {
+      :root {
+        --bg: #fff; --paper: #fff; --ink: #000; --muted: #444;
+        --rule: #ccc; --accent: #0f766e; --accent-soft: #fff;
+      }
+      @page { margin: 14mm 14mm; }
+      body { font-size: 10.5pt; }
+      .page { margin: 0; padding: 0; border: 0; max-width: none; }
+      .actions, footer { display: none; }
+      section { margin-top: 22px; }
+      .initiative, .job-head, .role { break-inside: avoid; }
+      h2 { break-after: avoid; }
+      a { color: var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Bernard A. Traqueña</h1>
+      <p class="title">Engineering Leader — Cloud Platform, DevOps &amp; DevSecOps (AWS)</p>
+      <ul class="contact">
+        <li>Singapore</li>
+        <li><a href="mailto:btraquena@gmail.com">btraquena@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/bernardtraquena/">linkedin.com/in/bernardtraquena</a></li>
+        <li><a href="https://github.com/traqy">github.com/traqy</a></li>
+      </ul>
+      <div class="actions">
+        <button class="btn" onclick="window.print()">Save as PDF</button>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Hands-on cloud platform and DevOps leader with 20+ years in engineering and 9+ years designing and running production infrastructure on <strong>AWS</strong>. I architected and migrated Tech in Asia's entire AWS estate from scratch using Infrastructure as Code (<strong>CloudFormation, AWS CDK, Ansible</strong>), built CI/CD with <strong>Jenkins</strong> and <strong>GitHub Actions</strong>, and run containerised workloads on <strong>Kubernetes (EKS)</strong> and <strong>ECS Fargate</strong>. As Head of Engineering I lead the Infrastructure and Cybersecurity teams while remaining hands-on in DevOps and <strong>DevSecOps</strong> — SSO and least-privilege access, secret management, secret scanning, and observability with SLOs. I combine platform depth with team leadership, mentoring, and budget ownership.</p>
+    </section>
+
+    <section>
+      <h2>Core Competencies</h2>
+      <dl class="skills">
+        <div>
+          <dt>AWS &amp; Cloud Platform</dt>
+          <dd>VPC, EC2, S3, RDS, Redshift, EMR, Lambda, EKS, ECS Fargate, CloudFormation, AWS CDK (TypeScript)</dd>
+        </div>
+        <div>
+          <dt>IaC, CI/CD &amp; Automation</dt>
+          <dd>Infrastructure as Code, Ansible, Puppet, Jenkins, GitHub Actions, Rundeck, Maven/SBT, Nexus</dd>
+        </div>
+        <div>
+          <dt>Containers &amp; Orchestration</dt>
+          <dd>Kubernetes (AWS EKS, Kubespray), ECS Fargate, Docker, Docker Swarm, Airflow</dd>
+        </div>
+        <div>
+          <dt>Security &amp; Compliance</dt>
+          <dd>SSO/OAuth (Google, GitHub), RBAC &amp; least-privilege, scoped API keys, secret management (SSM / Secrets Manager), KMS encryption, gitleaks secret scanning, append-only audit logging, cybersecurity strategy &amp; incident response</dd>
+        </div>
+        <div>
+          <dt>Observability</dt>
+          <dd>OpenTelemetry, SLOs, PII-free telemetry</dd>
+        </div>
+        <div>
+          <dt>Scripting &amp; Languages</dt>
+          <dd>Bash, Python, Ansible, Perl, Go, Java, TypeScript</dd>
+        </div>
+        <div>
+          <dt>Data &amp; Middleware</dt>
+          <dd>MySQL (Percona), Postgres, MS-SQL, Redshift, ElasticSearch, Cassandra, Couchbase, MongoDB, Redis, RabbitMQ, HAProxy, Hadoop/Hive</dd>
+        </div>
+        <div>
+          <dt>Leadership</dt>
+          <dd>Team leadership &amp; mentoring, technical roadmap, budget ownership, cross-functional stakeholder alignment</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>SPH Media</h3>
+          <span class="loc">Singapore · July 2017 – Present</span>
+        </div>
+        <p class="sub">Tech in Asia Pte. Ltd. — acquired by SPH Media</p>
+
+        <div class="role">
+          <span class="name">Head of Engineering &amp; DevOps / DevSecOps — Tech in Asia &amp; First Lifestyle Division (FLD)</span>
+          <span class="dates">July 2017 – Present</span>
+        </div>
+        <p class="sub">Joined as Senior Software &amp; DevOps Engineer; Head of Engineering since January 2024, while remaining hands-on in DevOps and DevSecOps.</p>
+        <ul>
+          <li>Migrated and architected the entire Tech in Asia AWS infrastructure from scratch using Jenkins, Ansible, AWS CDK, and CloudFormation.</li>
+          <li>Automated the full lifecycle of a web platform on Kubernetes (AWS EKS, Kubespray) and AWS ECS Fargate with Jenkins/Ansible CI/CD.</li>
+          <li>Developed deployment strategies for containerised web apps (Nginx, WordPress, Laravel) on Kubernetes.</li>
+          <li>Built a Docker Swarm cluster orchestrating a customized Airflow environment for complex data workflows.</li>
+          <li>Defined a standard platform baseline for six internal data/AI services: Google + GitHub SSO, scoped/hashed API keys, per-service OpenTelemetry observability with SLOs, SSM secret management (zero <code>.env</code> secrets, gitleaks-verified), and a GitHub Actions CI/CD baseline.</li>
+          <li>Designed a security-hardened internal service with deny-by-default RBAC, fail-closed auth, KMS-encrypted artifacts with short-lived signed URLs, and append-only audit logging.</li>
+          <li>Champion cybersecurity strategy, incident response, and policy to protect company assets and user data.</li>
+          <li>Engineering department head for FLD, which runs the SPH Lifestyle Magazines and HardwareZone Forums web applications.</li>
+          <li>Lead and mentor managers and engineers across Infrastructure, Cybersecurity, Software Development, Mobile, and QA; own the departmental budget and key technology-investment decisions.</li>
+          <li>Led the company's adoption of AI and agentic systems, including the secure platform and access model that lets AI agents operate internal services.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>The Unity Group of Companies Pte. Ltd.</h3>
+          <span class="loc">Singapore</span>
+        </div>
+        <div class="role">
+          <span class="name">IT Manager</span>
+          <span class="dates">October 2016 – June 2017</span>
+        </div>
+        <ul>
+          <li>Architected the corporate website's AWS infrastructure (EC2/S3/CDN) and a Jenkins CI/CD pipeline for deployment and backups.</li>
+          <li>Managed all IT cloud services, digital assets, and infrastructure for a fintech startup.</li>
+          <li>Led the migration of 50+ users from Zimbra to Google G-Suite, introducing 2-Step Verification and mobile device management.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>MigMe / Mig33, Inc.</h3>
+          <span class="loc">Singapore</span>
+        </div>
+        <div class="role">
+          <span class="name">Senior Software Engineer (DevOps)</span>
+          <span class="dates">September 2011 – October 2016</span>
+        </div>
+        <ul>
+          <li>Served as the production-infrastructure SME — Puppet, HAProxy, ElasticSearch, RabbitMQ, Couchbase, and MySQL clusters.</li>
+          <li>Established a fully automated CI/CD pipeline (Jenkins, Rundeck) for Java, PHP, and mobile applications.</li>
+          <li>Transformed build processes from Ant to Maven/SBT and managed the Nexus artifact repository.</li>
+          <li>Built and maintained large-scale data imports into a Hadoop/Hive data warehouse.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Previous Experience</h2>
+      <ul class="prev">
+        <li><strong>Senior IT Analyst Developer</strong>, National Library Board (Emerio Globesoft Pte. Ltd.) <span class="meta">· Singapore · 2010 – 2011</span></li>
+        <li><strong>Senior Analyst Programmer</strong>, Phillip Capital Securities (Zenith Info Tech Pte. Ltd.) <span class="meta">· Singapore · 2009 – 2010</span></li>
+        <li><strong>Technical Operations Senior Manager</strong>, XyberSolutions, Inc. / Information Gateway, Inc. <span class="meta">· Philippines · 2005 – 2009</span></li>
+        <li><strong>Team Lead, Mobile Application Developer</strong>, XyberSolutions, Inc. / Information Gateway, Inc. <span class="meta">· Philippines</span></li>
+        <li><strong>Team Lead &amp; Senior Applications Developer</strong>, PIXEM Creative Cyberware <span class="meta">· Philippines · 1999 – 2005</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>B.S. in Computer Science</strong> — Ateneo De Naga University, Naga City, Philippines</p>
+    </section>
+
+    <section>
+      <h2>Certifications &amp; Training</h2>
+      <ul>
+        <li>Big Data on AWS (2014)</li>
+        <li>7 Habits of Highly Effective People (2008)</li>
+        <li>Leadership Development — IM Essentials Workshop (2006)</li>
+      </ul>
+    </section>
+
+    <footer>Bernard A. Traqueña · Singapore</footer>
+  </main>
+</body>
+</html>
